@@ -3,9 +3,9 @@ package matala0;
 
 public class Position {
 
-	private double lat;		//LATITUDE ÷å øåçá
-	private double lon;		//LONGTITUDE ÷å àåøê
-	private double alt;		//ALTITUDE âåáä
+	private double lat;		//LATITUDE 
+	private double lon;		//LONGTITUDE 
+	private double alt;		//ALTITUDE 
 
 
 	public Position() {
@@ -13,7 +13,7 @@ public class Position {
 		lat = 0.0;
 		alt = 0.0;
 	}
-	//[14:49, 16/11/2017] òðáø áåæâìå: http://download.eclipse.org/technology/m2e/releases[14:49, 16/11/2017] òðáø áåæâìå: http://download.eclipse.org/technology/m2e/releases[14:49, 16/11/2017] òðáø áåæâìå: http://download.eclipse.org/technology/m2e/releases
+	
 
 	public Position (String lon, String lat, String alt)
    {
