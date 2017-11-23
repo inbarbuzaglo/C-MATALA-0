@@ -3,9 +3,9 @@ package matala0;
 
 public class Position {
 
-	private double lat;		//LATITUDE ÷å øåçá
-	private double lon;		//LONGTITUDE ÷å àåøê
-	private double alt;		//ALTITUDE âåáä
+	private double lat;		//LATITUDE Ã·Ã¥ Ã¸Ã¥Ã§Ã¡
+	private double lon;		//LONGTITUDE Ã·Ã¥ Ã Ã¥Ã¸Ãª
+	private double alt;		//ALTITUDE Ã¢Ã¥Ã¡Ã¤
 
 
 	public Position() {
@@ -13,7 +13,7 @@ public class Position {
 		lat = 0.0;
 		alt = 0.0;
 	}
-	//[14:49, 16/11/2017] òðáø áåæâìå: http://download.eclipse.org/technology/m2e/releases[14:49, 16/11/2017] òðáø áåæâìå: http://download.eclipse.org/technology/m2e/releases[14:49, 16/11/2017] òðáø áåæâìå: http://download.eclipse.org/technology/m2e/releases
+	//[14:49, 16/11/2017] Ã²Ã°Ã¡Ã¸ Ã¡Ã¥Ã¦Ã¢Ã¬Ã¥: http://download.eclipse.org/technology/m2e/releases[14:49, 16/11/2017] Ã²Ã°Ã¡Ã¸ Ã¡Ã¥Ã¦Ã¢Ã¬Ã¥: http://download.eclipse.org/technology/m2e/releases[14:49, 16/11/2017] Ã²Ã°Ã¡Ã¸ Ã¡Ã¥Ã¦Ã¢Ã¬Ã¥: http://download.eclipse.org/technology/m2e/releases
 
 	public Position (String lon, String lat, String alt)
    {
@@ -22,7 +22,7 @@ public class Position {
 		this.alt = Double.parseDouble(alt);
 	}
 	
-	public Position (double lon, double lat, int alt)
+	public Position (double lon, double lat, double alt)
 	{
 			this.lat = lat;
 			this.lon = lon;
