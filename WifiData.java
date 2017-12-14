@@ -1,6 +1,11 @@
-package matala0;
+package Headline_Obj;
 
-
+/**
+ * 
+ * @author Inbar
+ * 
+ *This class represents a Wifi point. These parameters will repeat themselves up to 10 times.
+ */
 
 public class WifiData {
 	
@@ -63,3 +68,4 @@ public class WifiData {
 		return SSID + "," + MAC + "," + Frequncy + "," + RSSI + "," ;
 	}
 }
+
