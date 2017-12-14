@@ -17,6 +17,8 @@ package matala0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+					Algo alg = new Algo(ListFromCSV.mergedfiles);
+			Algo2 alg2 = new Algo2(ListFromCSV.outputList);
 		}
 
 	}
