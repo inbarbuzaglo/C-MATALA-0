@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Set;
 
-import Headline_Obj.Position;
-import Headline_Obj.line;
+import matala0.Position;
 import matala0.CSV;
 import matala0.ListFromCSV;
 import matala0.line_OUTPUT_FORMAT;
