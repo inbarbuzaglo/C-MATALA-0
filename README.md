@@ -24,3 +24,8 @@ ToKML:This class takes the csv table and creates a KML file using the jak packag
 
 Filter:This class filters by location or date (at user request) and sends the KML to the filter.
 The Date filter is not always working, we didn't succeed to fix the bug yet.
+
+line_OUTPUT_FORMAT-
+Algo-
+Algo2-
+WeightedMean-
