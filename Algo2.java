@@ -2,7 +2,7 @@ package Algo;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Set;
+
 
 import matala0.Position;
 import matala0.CSV;
