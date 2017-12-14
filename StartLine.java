@@ -6,7 +6,7 @@ public class StartLine {
 
 		private String Time;
 		private String ID;
-		private String WifiNetwork;
+		public String WifiNetwork;
 
 		public String toString() {
 			return "[Time=" + Time + ", ID=" + ID + ", WifiNetwork=" + WifiNetwork + "]";
