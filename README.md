@@ -26,7 +26,10 @@ Filter:This class filters by location or date (at user request) and sends the KM
 The Date filter is not always working, we didn't succeed to fix the bug yet.
 
 line_OUTPUT_FORMAT-
+
 Algo- In this class,we will revalue the location of the MAC using the information in the csv file,
  We will look for the most powerful MAC samples in the file and calculate a weighted average.
-Algo2-
+
+Algo2- In this class, we will get a number of Wifi samples, which will help us revalue the user's position by a weighted center of gravity algorithm.
+
 WeightedMean-
