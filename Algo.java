@@ -6,7 +6,11 @@ import Headline_Obj.Position;
 import Headline_Obj.line;
 import matala0.CSV;
 import matala0.ListFromCSV;
-
+/**
+ * @author Inbar
+ *In this class,we will revalue the location of the MAC using the information in the csv file,
+ We will look for the most powerful MAC samples in the file and calculate a weighted average.
+ */
 public class Algo {
 
 	static ArrayList<line> mergedfiles;
