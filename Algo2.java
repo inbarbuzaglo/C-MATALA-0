@@ -2,13 +2,17 @@ package Algo;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-
-
 import matala0.Position;
 import matala0.CSV;
 import matala0.line_OUTPUT_FORMAT;
-
-public class Algo2 {
+/**
+ * In this class, we will get a number of Wifi samples, which will help us
+ * revalue the user's position by a weighted center of gravity algorithm.
+ * 
+ * @author Inbar
+ *
+ */
+publicpublic class Algo2 {
 
 	private static String outputFilePath = "C:/test1/output/algo2.csv";
 	static ArrayList<line_OUTPUT_FORMAT> list = new ArrayList<line_OUTPUT_FORMAT>();
