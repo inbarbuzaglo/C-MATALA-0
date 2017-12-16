@@ -7,6 +7,11 @@ import Headline_Obj.line;
 import matala0.line_OUTPUT_FORMAT;
 
 public class WeightedMean {
+	/**
+	 *
+	 * @author Meytal
+	 *This class represents the calculation of the whightedMean as an Object
+	 */
 	
 	public static Position Weighted(ArrayList <line> Algo1) 
 	{
