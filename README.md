@@ -32,4 +32,4 @@ Algo- In this class,we will revalue the location of the MAC using the informatio
 
 Algo2- In this class, we will get a number of Wifi samples, which will help us revalue the user's position by a weighted center of gravity algorithm.
 
-WeightedMean-
+WeightedMean-we inserted to this class the calculation of the whightedMean as an Object.
