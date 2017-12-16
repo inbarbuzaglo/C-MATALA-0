@@ -25,7 +25,7 @@ ToKML:This class takes the csv table and creates a KML file using the jak packag
 Filter:This class filters by location or date (at user request) and sends the KML to the filter.
 The Date filter is not always working, we didn't succeed to fix the bug yet.
 
-line_OUTPUT_FORMAT-
+line_OUTPUT_FORMAT-int the class, we define external line object that incluod up to 10 wifi network and represent scanning as an object.(according the format of requested csv table) 
 
 Algo- In this class,we will revalue the location of the MAC using the information in the csv file,
  We will look for the most powerful MAC samples in the file and calculate a weighted average.
