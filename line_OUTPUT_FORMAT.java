@@ -7,8 +7,10 @@ import Headline_Obj.StartLine;
 import Headline_Obj.WifiData;
 
 /**
- * 
- * @author Inbar This class represents each line in the csv file as an Object
+ *
+ * @author Meytal
+ *This class represents line that included up to 10 WIFI as an object
+ *each line_output_format represent scanning according the request csv table format 
  */
 public class line_OUTPUT_FORMAT {
 	private StartLine startLine;
