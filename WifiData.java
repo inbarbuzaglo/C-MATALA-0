@@ -1,4 +1,4 @@
-package Headline_Obj;
+package Scanning;
 
 /**
  * 
