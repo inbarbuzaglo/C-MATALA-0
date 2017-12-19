@@ -59,7 +59,7 @@ publicpublic class Algo2 {
 						}
 					}
 				}
-				weight = 1 / ((Math.pow(diff, 0.4) * (Math.pow(line.getWifi(j).getRSSI(), 2))));
+				weight = 10000 / ((Math.pow(diff, 0.4) * (Math.pow(line.getWifi(j).getRSSI(), 2))));
 				sumWeight *= weight;
 			}
 			double[] nums = { i, sumWeight };
