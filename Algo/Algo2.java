@@ -21,7 +21,7 @@ publicpublic class Algo2 {
 
 	public Algo2(ArrayList<line_OUTPUT_FORMAT> list) {
 		Algo2.list = list;
-		Position pos = new Position();
+		Position pos;
 		CSV csv = new CSV(outputFilePath);
 		for (int i = 0; i < list.size(); i++) {
 			pos = new Position();
