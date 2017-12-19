@@ -46,11 +46,11 @@ publicpublic class Algo2 {
 		double sumWeight = 1;
 		for (int i = 0; i < list.size(); i++) {
 			for (int j = 0; j < line.getWifiArray().size(); j++) {
-				int indexofmac = list.get(i).isMACexists(line.getWifiArray().get(j).getMAC());
+				int indexofmac = list.get(i).isMACexists(line.getWifi(j).getMAC());
 				if (indexofmac == -1) {
 					diff = 100;
 				} else {
-					if (list.get(i).getWifi(indexofmac).getRSSI() == -120) {
+					if (list.get(i).getWifi(indexofmac).getRSSI() <= -120) {
 						diff = 100;
 					} else {
 						diff = Math.abs(line.getWifi(j).getRSSI() - list.get(i).getWifi(indexofmac).getRSSI());
