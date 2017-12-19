@@ -68,8 +68,8 @@ publicpublic class Algo2 {
 		}
 		pi.sort(new Comparator<double[]>() {
 			public int compare(double[] o1, double[] o2) {
-				if (o1[1] > o2[1]) return 0;
-				else return 1;
+				if (o1[1] > o2[1]) return 1;
+				else return -1;
 			}});
 		
 		if(pi.size() < 3) {return null;}
