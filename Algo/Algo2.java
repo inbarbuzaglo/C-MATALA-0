@@ -25,9 +25,10 @@ publicpublic class Algo2 {
 		CSV csv = new CSV(outputFilePath);
 		for (int i = 0; i < list.size(); i++) {
 			pos = new Position();
-			pos = func(list.get(i));
-			System.out.println(pos);
-			if (pos != null) {
+			if(list.get(i).getWifiArray().size()<3){
+				continue;
+			}else{
+				pos = func(list.get(i));
 				csv.writePos(pos);
 			}
 			csv.writeWifiNetArray(list.get(i));
