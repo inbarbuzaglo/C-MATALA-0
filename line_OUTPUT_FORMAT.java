@@ -1,4 +1,4 @@
-package Scanni;
+package Scann;
 
 
 import java.util.ArrayList;
