@@ -72,7 +72,7 @@ publicpublic class Algo2 {
 				else return -1;
 			}});
 		
-		if(pi.size() < 3) {return null;}
+		
 		for (int i = 0; i < 3; i++) { 
 			evaluateList.add(list.get((int) pi.get(i)[0]));
 		}
