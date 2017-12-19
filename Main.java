@@ -5,8 +5,8 @@ package CSV;
 import java.io.File;
 import java.io.IOException;
 
-import Algo.Algo;
-import Algo.Algo2;
+import Algo.Algo.Algo;
+import Algo.Algo.Algo2;
 /**
  * 
  * @author Inbar

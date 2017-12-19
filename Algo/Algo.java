@@ -1,8 +1,10 @@
 package Algo;
 
+
 import java.util.ArrayList;
-import Algo.WeightedMean;
-import Headline_Obj.Position;
+
+import Al
+import Algo.Algo.WeightedMean;
 import Headline_Obj.line;
 import matala0.CSV;
 import matala0.ListFromCSV;
