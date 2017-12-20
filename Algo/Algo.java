@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 import Al
 import Algo.Algo.WeightedMean;
-import Headline_Obj.line;
-import matala0.CSV;
-import matala0.ListFromCSV;
+import Scanning.line;
+import CSV.CSV;
+import CSV.ListFromCSV;
 /**
  * @author Inbar
  *In this class,we will revalue the location of the MAC using the information in the csv file,
