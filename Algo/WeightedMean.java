@@ -1,11 +1,13 @@
 package Algo;
 
 
+
 import java.util.ArrayList;
 
-import Headline_Obj.Position;
-import Headline_Obj.line;
-import matala0.line_OUTPUT_FORMAT;
+import Scanning.Position;
+import Scanning.line;
+import Scanning.line_OUTPUT_FORMAT;
+
 
 public class WeightedMean {
 	/**
