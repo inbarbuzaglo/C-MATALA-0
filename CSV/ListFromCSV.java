@@ -1,5 +1,6 @@
 package CSV;
 
+
 	import java.io.File;
 	import java.io.FileNotFoundException;
 	import java.io.IOException;
@@ -8,10 +9,11 @@ package CSV;
 	import java.util.Comparator;
 	import java.util.Scanner;
 
-import Headline_Obj.Position;
-import Headline_Obj.StartLine;
-import Headline_Obj.WifiData;
-import Headline_Obj.line;
+import Scanning.Position;
+import Scanning.StartLine;
+import Scanning.WifiData;
+import Scanning.line;
+import Scanning.line_OUTPUT_FORMAT;
 /**
  * 
  * @author Inbar
