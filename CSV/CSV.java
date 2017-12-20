@@ -4,9 +4,10 @@ import java.io.FileWriter;
 	import java.io.IOException;
 	import java.util.ArrayList;
 
-import Headline_Obj.Position;
-import Headline_Obj.WifiData;
-import Headline_Obj.line;
+import Scanning.Position;
+import Scanning.WifiData;
+import Scanning.line;
+import Scanning.line_OUTPUT_FORMAT;
 /**
  * 
  * @author Inbar
