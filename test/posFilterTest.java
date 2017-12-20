@@ -7,8 +7,7 @@ import java.io.FileNotFoundException;
 
 import org.junit.Test;
 
-
-import matala0.Position;
+import Scanning.Position;
 
 public class posFilterTest {
 
