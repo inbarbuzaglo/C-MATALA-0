@@ -1,17 +1,16 @@
 package test;
 
 
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Date;
 
-import matala0.CSV;
-import matala0.Filter;
-import matala0.ListFromCSV;
-import matala0.Position;
-import matala0.line;
+import CSV.CSV;
+import CSV.ListFromCSV;
+import Scanning.Position;
+import Scanning.line;
+import ToKML.Filter;
 
 public class junit {
 	/**
