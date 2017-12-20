@@ -1,14 +1,14 @@
 
+
 package ToKML;
 
-
-
-
+	 
 	import java.util.Date;
 	import java.util.Scanner;
-	import matala0.Position;
-	import matala0.toKML;
-	import java.text.DateFormat;
+
+import Scanning.Position;
+
+import java.text.DateFormat;
 	import java.text.ParseException;
 	import java.text.SimpleDateFormat;
 
