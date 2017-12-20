@@ -1,12 +1,12 @@
-package test;
 
+package test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import matala0.Position;
+import Scanning.Position;
 
 public class IsBiggerTest {
 	
