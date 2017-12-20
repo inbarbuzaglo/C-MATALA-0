@@ -3,9 +3,9 @@ package Algo;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import matala0.Position;
-import matala0.CSV;
-import matala0.line_OUTPUT_FORMAT;
+import Scanning.Position;
+import CSV.CSV;
+import Scanning.line_OUTPUT_FORMAT;
 /**
  * In this class, we will get a number of Wifi samples, which will help us
  * revalue the user's position by a weighted center of gravity algorithm.
