@@ -6,7 +6,7 @@ package test;
 	import org.junit.Before;
 	import org.junit.Test;
 
-	import matala0.Position;
+import Scanning.Position;
 
 	public class getPositionTest {
 		
