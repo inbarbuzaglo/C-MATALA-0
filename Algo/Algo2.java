@@ -13,7 +13,7 @@ import Scanning.line_OUTPUT_FORMAT;
  * @author Inbar
  *
  */
-publicpublic class Algo2 {
+public class Algo2 {
 
 	private static String outputFilePath = "C:/test1/output/algo2.csv";
 	static ArrayList<line_OUTPUT_FORMAT> list = new ArrayList<line_OUTPUT_FORMAT>();
