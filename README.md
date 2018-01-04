@@ -33,3 +33,7 @@ Algo- In this class,we will revalue the location of the MAC using the informatio
 Algo2- In this class, we will get a number of Wifi samples, which will help us revalue the user's position by a weighted center of gravity algorithm.
 
 WeightedMean-we inserted to this class the calculation of the whightedMean as an Object.
+
+GUI-that's out user interface ,  through this window we can perform the functions we have built throughout the whole program
+Wrapper-This is the mediator between our code and the GUI, it includes all our functions that getting meaning in a press of button 
+in the window that is shown to the user
