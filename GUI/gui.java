@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -35,8 +37,6 @@ public class Source extends JFrame {
 	private JTextField textField_7;
 	private JTextField textField_8;
 	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
 
 	/**
 	 * Launch the application.
@@ -58,6 +58,8 @@ public class Source extends JFrame {
 	 * Create the frame.
 	 */
 	public Source() {
+		
+	   	 final wrapper w= new wrapper(); //מעטפת
 
 	   	 JFrame f = new JFrame("wigle"); 
 	   	 JPanel MyPanel1 = new JPanel();
@@ -66,7 +68,7 @@ public class Source extends JFrame {
 	   	 JLabel x1 = new JLabel("folder..");
 	   	 x1.setFont(new Font("Tahoma", Font.BOLD, 13));
 	   	 x1.setBackground(Color.LIGHT_GRAY);
-	   	 JTextField x2 = new JTextField();
+	   	 final JTextField x2 = new JTextField();
 	   	JLabel x3 = new JLabel("file..");
 	   	x3.setFont(new Font("Tahoma", Font.BOLD, 13));
 	  	 JTextField x4 = new JTextField();
@@ -78,13 +80,6 @@ public class Source extends JFrame {
 	    
 	   	 f.getContentPane().add( MyPanel1, "North");   // Add MyPanel1 to North
 	   	 JButton y7 = new JButton("Clear data");
-	   	 y7.addActionListener(new ActionListener()
-	   	 {
-	    		 public void actionPerformed(ActionEvent evt)
-	    		 {
-	    			 System.out.println("Clear data");
-	         	 }
-	   	 });
 	   	 GroupLayout gl_MyPanel1 = new GroupLayout(MyPanel1);
 	   	 gl_MyPanel1.setHorizontalGroup(
 	   	 	gl_MyPanel1.createParallelGroup(Alignment.LEADING)
@@ -94,35 +89,37 @@ public class Source extends JFrame {
 	   	 			.addGap(18)
 	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.LEADING)
 	   	 				.addGroup(gl_MyPanel1.createSequentialGroup()
-	   	 					.addComponent(x2, GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-	   	 					.addGap(18)
-	   	 					.addComponent(x3)
-	   	 					.addGap(18))
+	   	 					.addComponent(x2, GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+	   	 					.addGap(63))
 	   	 				.addGroup(gl_MyPanel1.createSequentialGroup()
 	   	 					.addComponent(x5)
 	   	 					.addGap(97)))
-	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.LEADING)
-	   	 				.addComponent(y6)
+	   	 			.addComponent(x3)
+	   	 			.addPreferredGap(ComponentPlacement.RELATED)
+	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.TRAILING)
+	   	 				.addGroup(Alignment.LEADING, gl_MyPanel1.createSequentialGroup()
+	   	 					.addComponent(y6)
+	   	 					.addGap(52)
+	   	 					.addComponent(y7)
+	   	 					.addContainerGap())
 	   	 				.addGroup(gl_MyPanel1.createSequentialGroup()
 	   	 					.addComponent(x4, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE)
-	   	 					.addPreferredGap(ComponentPlacement.RELATED)
-	   	 					.addComponent(y7)))
-	   	 			.addGap(28))
+	   	 					.addGap(182))))
 	   	 );
 	   	 gl_MyPanel1.setVerticalGroup(
 	   	 	gl_MyPanel1.createParallelGroup(Alignment.LEADING)
 	   	 		.addGroup(gl_MyPanel1.createSequentialGroup()
 	   	 			.addContainerGap()
 	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.BASELINE)
-	   	 				.addComponent(x4, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-	   	 				.addComponent(x3)
 	   	 				.addComponent(x2, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
 	   	 				.addComponent(x1)
-	   	 				.addComponent(y7, GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE))
-	   	 			.addGap(18)
+	   	 				.addComponent(x3)
+	   	 				.addComponent(x4, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
+	   	 			.addPreferredGap(ComponentPlacement.RELATED)
 	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.BASELINE)
 	   	 				.addComponent(x5)
-	   	 				.addComponent(y6))
+	   	 				.addComponent(y6)
+	   	 				.addComponent(y7, GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE))
 	   	 			.addContainerGap())
 	   	 );
 	   	 MyPanel1.setLayout(gl_MyPanel1);
@@ -147,9 +144,9 @@ public class Source extends JFrame {
 	   	 final JCheckBox x8 = new JCheckBox("lat");
 	  
 	   	 JLabel y31 = new JLabel("from");
-	   	 JTextField y32 = new JTextField(10);
+	   	 final JTextField y32 = new JTextField(10);
 		 JLabel y33 = new JLabel("to");
-	  	 JTextField y34 = new JTextField(10);
+	  	 final JTextField y34 = new JTextField(10);
 	     final JCheckBox x9 = new JCheckBox("lon");
 	   	 JLabel lonfrom = new JLabel("from");
 	   	 JTextField TF = new JTextField(10);
@@ -191,6 +188,14 @@ public class Source extends JFrame {
 	   	 textField_8 = new JTextField(10);
 	   	 
 	   	 textField_9 = new JTextField(10);
+	   	 
+	   	 JButton btnGo = new JButton("go");
+	   	 
+	   	 JButton button = new JButton("go");
+	   	 
+	   	 JButton button_1 = new JButton("go");
+	   	 
+	   	 JButton button_2 = new JButton("go");
 	   	 GroupLayout gl_MyPanel2 = new GroupLayout(MyPanel2);
 	   	 gl_MyPanel2.setHorizontalGroup(
 	   	 	gl_MyPanel2.createParallelGroup(Alignment.LEADING)
@@ -224,17 +229,16 @@ public class Source extends JFrame {
 	   	 								.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, 106, GroupLayout.PREFERRED_SIZE)
 	   	 								.addComponent(y32, GroupLayout.PREFERRED_SIZE, 106, GroupLayout.PREFERRED_SIZE))))
 	   	 					.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 						.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 							.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 								.addGap(23)
-	   	 								.addComponent(label_3, GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
-	   	 								.addPreferredGap(ComponentPlacement.RELATED)
-	   	 								.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
-	   	 							.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 								.addGap(18)
-	   	 								.addComponent(label_1, GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-	   	 								.addPreferredGap(ComponentPlacement.RELATED)
-	   	 								.addComponent(textField_8, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)))
+	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
+	   	 							.addGap(23)
+	   	 							.addComponent(label_3, GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+	   	 							.addPreferredGap(ComponentPlacement.RELATED)
+	   	 							.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
+	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
+	   	 							.addGap(18)
+	   	 							.addComponent(label_1, GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+	   	 							.addPreferredGap(ComponentPlacement.RELATED)
+	   	 							.addComponent(textField_8, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
 	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
 	   	 							.addGap(18)
 	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
@@ -244,48 +248,56 @@ public class Source extends JFrame {
 	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 								.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
 	   	 								.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))))
-	   	 					.addGap(145)
-	   	 					.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
+	   	 					.addPreferredGap(ComponentPlacement.UNRELATED)
+	   	 					.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 							.addComponent(SP2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 							.addComponent(SP3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 							.addComponent(SP4, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
-	   	 						.addComponent(TF3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 							.addComponent(altfrom, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-	   	 							.addPreferredGap(ComponentPlacement.RELATED)
-	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
-	   	 								.addComponent(TF, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 								.addComponent(TF2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
-	   	 							.addGap(18)
+	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
+	   	 								.addComponent(btnGo)
+	   	 								.addComponent(button, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+	   	 								.addComponent(button_1, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE))
+	   	 							.addGap(81)
 	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
 	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
+	   	 									.addComponent(SP2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 									.addComponent(SP3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 									.addComponent(SP4, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
+	   	 								.addComponent(TF3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
+	   	 									.addComponent(altfrom, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+	   	 									.addPreferredGap(ComponentPlacement.RELATED)
+	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
+	   	 										.addComponent(TF, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 										.addComponent(TF2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
+	   	 									.addGap(18)
+	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
 	   	 										.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 											.addGap(38)
 	   	 											.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 												.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 													.addComponent(textField, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 													.addGap(10)
-	   	 													.addComponent(y10, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
-	   	 												.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 													.addGap(38)
+	   	 													.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
+	   	 														.addGroup(gl_MyPanel2.createSequentialGroup()
+	   	 															.addComponent(textField, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 															.addGap(10)
+	   	 															.addComponent(y10, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
+	   	 														.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 														.addGroup(gl_MyPanel2.createSequentialGroup()
+	   	 															.addGap(9)
+	   	 															.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))))
 	   	 												.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 													.addGap(9)
-	   	 													.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))))
+	   	 													.addComponent(altto)
+	   	 													.addGap(30)
+	   	 													.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)))
+	   	 											.addGap(122))
+	   	 										.addComponent(lonto, GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE))
+	   	 									.addGap(244)
+	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
 	   	 										.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 											.addComponent(altto)
-	   	 											.addGap(30)
-	   	 											.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)))
-	   	 									.addGap(122))
-	   	 								.addComponent(lonto, GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE))
-	   	 							.addGap(244)
-	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
-	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 									.addComponent(y27, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-	   	 									.addGap(162))
-	   	 								.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 									.addComponent(y34, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 									.addComponent(TF1, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)))))))
+	   	 											.addComponent(y27, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+	   	 											.addGap(162))
+	   	 										.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
+	   	 											.addComponent(y34, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 											.addComponent(TF1, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))))))
+	   	 						.addComponent(button_2, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE))))
 	   	 			.addContainerGap())
 	   	 );
 	   	 gl_MyPanel2.setVerticalGroup(
@@ -317,7 +329,8 @@ public class Source extends JFrame {
 	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.BASELINE)
 	   	 										.addComponent(y26, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	   	 										.addComponent(label)
-	   	 										.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+	   	 										.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+	   	 										.addComponent(btnGo))))
 	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
 	   	 									.addGap(9)
@@ -332,7 +345,8 @@ public class Source extends JFrame {
 	   	 										.addComponent(y31, GroupLayout.PREFERRED_SIZE, 52, GroupLayout.PREFERRED_SIZE)
 	   	 										.addComponent(y32, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	   	 										.addComponent(y33, GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
-	   	 										.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	   	 										.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+	   	 										.addComponent(button))
 	   	 									.addGap(6)
 	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 										.addComponent(x9, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
@@ -340,14 +354,16 @@ public class Source extends JFrame {
 	   	 											.addComponent(lonfrom, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 	   	 											.addComponent(label_1)
 	   	 											.addComponent(textField_8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	   	 											.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+	   	 											.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+	   	 											.addComponent(button_1)))
 	   	 									.addPreferredGap(ComponentPlacement.RELATED)
 	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING, false)
 	   	 										.addGroup(gl_MyPanel2.createParallelGroup(Alignment.BASELINE)
 	   	 											.addComponent(label_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 	   	 											.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	   	 											.addComponent(label_3)
-	   	 											.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	   	 											.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+	   	 											.addComponent(button_2))
 	   	 										.addComponent(x10, GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
 	   	 									.addGap(21))))
 	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
@@ -376,97 +392,53 @@ public class Source extends JFrame {
 	      
 	      JPanel MyPanel3 = new JPanel();
 	      MyPanel3.setBackground(Color.LIGHT_GRAY);
-	     
-	    	 JLabel y11 = new JLabel("Algo1:");
-	    	 y11.setFont(new Font("Tahoma", Font.BOLD, 13));
 	    	 JLabel y12 = new JLabel("    ");
-	    	 JLabel y15 = new JLabel("mac");
 	    	
-	    	 JButton y17 = new JButton("go");
+	    	 JButton y17 = new JButton("Algo1");
+	    	 y17.setToolTipText("Location per network");
 	    	 y17.setFont(new Font("Tahoma", Font.BOLD, 11));
 	    	 y17.setBackground(new Color(102, 102, 102));
-	   
-	    	 JLabel y18 = new JLabel("Algo2");
-	    	 y18.setFont(new Font("Tahoma", Font.BOLD, 13));
-	    	 JLabel y22 = new JLabel("scan");
 	    	
-	    	 JButton y24 = new JButton("go");
+	    	 JButton y24 = new JButton("Algo2");
 	    	 y24.setFont(new Font("Tahoma", Font.BOLD, 11));
 	    	 y24.setBackground(Color.GRAY);
-	    	
-	    	  	
+	    		    	  	
 	     
 	    	 f.getContentPane().add( MyPanel3, "South");
-	    	 
-	    	 textField_10 = new JTextField();
-	    	 textField_10.setColumns(10);
-	    	 
-	    	 textField_11 = new JTextField();
-	    	 textField_11.setColumns(10);
 	    	 GroupLayout gl_MyPanel3 = new GroupLayout(MyPanel3);
 	    	 gl_MyPanel3.setHorizontalGroup(
 	    	 	gl_MyPanel3.createParallelGroup(Alignment.LEADING)
 	    	 		.addGroup(gl_MyPanel3.createSequentialGroup()
-	    	 			.addContainerGap()
-	    	 			.addGroup(gl_MyPanel3.createParallelGroup(Alignment.LEADING, false)
-	    	 				.addGroup(gl_MyPanel3.createSequentialGroup()
-	    	 					.addComponent(y11, GroupLayout.PREFERRED_SIZE, 63, GroupLayout.PREFERRED_SIZE)
-	    	 					.addPreferredGap(ComponentPlacement.RELATED)
-	    	 					.addComponent(y15, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
-	    	 					.addPreferredGap(ComponentPlacement.UNRELATED)
-	    	 					.addComponent(textField_10, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)
-	    	 					.addGap(18)
-	    	 					.addComponent(y17))
-	    	 				.addGroup(gl_MyPanel3.createSequentialGroup()
-	    	 					.addComponent(y18, GroupLayout.PREFERRED_SIZE, 63, GroupLayout.PREFERRED_SIZE)
-	    	 					.addPreferredGap(ComponentPlacement.RELATED)
-	    	 					.addComponent(y22, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE)
-	    	 					.addPreferredGap(ComponentPlacement.RELATED)
-	    	 					.addComponent(textField_11, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)
-	    	 					.addGap(18)
-	    	 					.addComponent(y24, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-	    	 			.addGap(779)
-	    	 			.addComponent(y12, GroupLayout.PREFERRED_SIZE, 296, GroupLayout.PREFERRED_SIZE))
+	    	 			.addGap(131)
+	    	 			.addComponent(y17, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)
+	    	 			.addGap(42)
+	    	 			.addComponent(y24, GroupLayout.PREFERRED_SIZE, 70, GroupLayout.PREFERRED_SIZE)
+	    	 			.addPreferredGap(ComponentPlacement.RELATED)
+	    	 			.addComponent(y12, GroupLayout.PREFERRED_SIZE, 296, GroupLayout.PREFERRED_SIZE)
+	    	 			.addContainerGap(117, Short.MAX_VALUE))
 	    	 );
 	    	 gl_MyPanel3.setVerticalGroup(
 	    	 	gl_MyPanel3.createParallelGroup(Alignment.LEADING)
 	    	 		.addGroup(gl_MyPanel3.createSequentialGroup()
-	    	 			.addContainerGap()
 	    	 			.addGroup(gl_MyPanel3.createParallelGroup(Alignment.LEADING)
-	    	 				.addGroup(gl_MyPanel3.createParallelGroup(Alignment.BASELINE)
-	    	 					.addComponent(y11, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-	    	 					.addComponent(y15, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-	    	 					.addComponent(textField_10, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
-	    	 					.addComponent(y17, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
-	    	 				.addComponent(y12, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
-	    	 			.addGap(24)
-	    	 			.addGroup(gl_MyPanel3.createParallelGroup(Alignment.BASELINE)
-	    	 				.addComponent(y18, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-	    	 				.addComponent(y22, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-	    	 				.addComponent(textField_11, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
-	    	 				.addComponent(y24, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
-	    	 			.addContainerGap(70, Short.MAX_VALUE))
+	    	 				.addGroup(gl_MyPanel3.createSequentialGroup()
+	    	 					.addContainerGap()
+	    	 					.addComponent(y12, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
+	    	 				.addGroup(gl_MyPanel3.createSequentialGroup()
+	    	 					.addGap(21)
+	    	 					.addGroup(gl_MyPanel3.createParallelGroup(Alignment.BASELINE)
+	    	 						.addComponent(y17, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
+	    	 						.addComponent(y24, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE))))
+	    	 			.addContainerGap(86, Short.MAX_VALUE))
 	    	 );
 	    	 MyPanel3.setLayout(gl_MyPanel3);
 	     
 	    	 f.setSize(641, 585);
 	    	 f.setVisible(true);
 	    	 
-	    	 x5.addActionListener(new ActionListener()
-	    	 {
-	    		 public void actionPerformed(ActionEvent evt)
-	    		 {
-	    			 System.out.println("SAVE AS CSV");
-	         	 }
-	    	 });
+	    	
 	    	 
-	    	 y6.addActionListener(new ActionListener()
-	    	 {
-	    		 public void actionPerformed(ActionEvent evt)
-	    		 {
-	    			 System.out.println("save as kml");
-	         	 }
-	    	 });
+	    	
 	    	 x7.addItemListener(new ItemListener() { //time filter
 	    	      public void itemStateChanged(ItemEvent e) {
 	    	    	  if(x7.isSelected())
@@ -506,6 +478,94 @@ public class Source extends JFrame {
 	    	      }
 	    	    });
 	    	 
+	    	 btnGo.addActionListener(new ActionListener()
+	    	 {
+	    		 public void actionPerformed(ActionEvent evt)
+	    		 {
+	    			 System.out.println("go time filter");
+	         	 }
+	    	 });
+	    	 
+	    	 button.addActionListener(new ActionListener()
+	    	 {
+	    		 public void actionPerformed(ActionEvent evt)
+	    		 {
+	    			 String latfrom=y32.getText();
+	    			 String latto=y34.getText();	    			
+	    		
+	         	 }
+	    	 });
+	    	 
+	    	 button_1.addActionListener(new ActionListener()
+	    	 {
+	    		 public void actionPerformed(ActionEvent evt)
+	    		 {
+	    			 System.out.println("go lon filter");
+	         	 }
+	    	 });
+	    	 
+	    	 button_2.addActionListener(new ActionListener()
+	    	 {
+	    		 public void actionPerformed(ActionEvent evt)
+	    		 {
+	    			 System.out.println("go alt filter");
+	         	 }
+	    	 });
+	    	 
+	    	 y17.addActionListener(new ActionListener() //ALGO1 BUTTON
+	    	 {
+	    		 public void actionPerformed(ActionEvent evt)
+	    		 {
+	    			 w.Algo1();
+	         	 }
+	    	 });
+	    	 
+	    	 y24.addActionListener(new ActionListener()  //ALGO2 BUTTON
+	    	 {
+	    		 public void actionPerformed(ActionEvent evt)
+	    		 {
+	    			 w.Algo2();
+	         	 }
+	    	 });
+	    	 
+	    	 x5.addActionListener(new ActionListener()  //ALGO2 BUTTON
+	    	 {
+	    		 String s=x2.getText();
+	    		 public void actionPerformed(ActionEvent evt) 
+	    		 {
+	    			 
+	    			 String s=x2.getText();
+	    			 File folder = new File(s);
+	    			  w.listfromfolder(folder);
+	    		
+	         	 }
+	    	 });
+	    	 y6.addActionListener(new ActionListener()  //kml BUTTON
+	    	    	 {
+	    	    		 String s=x2.getText();
+	    	    		 public void actionPerformed(ActionEvent evt) 
+	    	    		 {
+	    	    			 
+	    	    			 String s=x2.getText();
+	    	    			 File folder = new File(s);
+	    	    			  w.tokml(folder);
+	    	    		
+	    	         	 }
+	    	    	 });
+	    	 
+	    	y7.addActionListener(new ActionListener()
+	    	 {
+	    		 public void actionPerformed(ActionEvent evt)
+	    		 {
+	    			
+	    			 try {
+	    				 w.cleardata();
+		    			 System.out.println("data cleard");
+	 				} catch (Exception e) {
+	 					 System.out.println("arraylist is already empty");
+	 				}
+	         	 }
+	    	 });
 	    	 
 
 	    	 
