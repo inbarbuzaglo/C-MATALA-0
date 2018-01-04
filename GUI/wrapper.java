@@ -37,13 +37,12 @@ public class wrapper {
 	toKML.openKML();
 	try {
 		Filter.initScanners();
+		Filter.NonFilter();
+		toKML.closeKML();
 	} catch (FileNotFoundException e) {
 		System.out.println("cannot find csv input file, " + e.getMessage());
 	}
 	
-	Filter.NonFilter();
-	toKML.closeKML();
-
 	}
 
 	
