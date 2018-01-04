@@ -27,10 +27,6 @@ import java.awt.Font;
 public class Source extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
 	private JTextField textField_4;
 	private JTextField textField_5;
 	private JTextField textField_6;
@@ -149,27 +145,16 @@ public class Source extends JFrame {
 	  	 final JTextField y34 = new JTextField(10);
 	     final JCheckBox x9 = new JCheckBox("lon");
 	   	 JLabel lonfrom = new JLabel("from");
-	   	 JTextField TF = new JTextField(10);
-		 JLabel lonto = new JLabel("to");
 	  	 JTextField TF1 = new JTextField(10);
 	   	 final JCheckBox x10 = new JCheckBox("alt");
 	   	 JLabel altfrom = new JLabel("from");
-	   	 JTextField TF2 = new JTextField(10);
 		 JLabel altto = new JLabel("to");
 	  	 JTextField TF3 = new JTextField(10);
 	   	 
 	    
 	   	 f.getContentPane().add( MyPanel2, BorderLayout.CENTER);
 	   	 
-	   	 textField = new JTextField(10);
-	   	 
 	   	 JLabel label = new JLabel("to");
-	   	 
-	   	 textField_1 = new JTextField(10);
-	   	 
-	   	 textField_2 = new JTextField(10);
-	   	 
-	   	 textField_3 = new JTextField(10);
 	   	 
 	   	 textField_4 = new JTextField(10);
 	   	 
@@ -264,32 +249,13 @@ public class Source extends JFrame {
 	   	 								.addComponent(TF3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
 	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
 	   	 									.addComponent(altfrom, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-	   	 									.addPreferredGap(ComponentPlacement.RELATED)
-	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
-	   	 										.addComponent(TF, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 										.addComponent(TF2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
-	   	 									.addGap(18)
-	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
+	   	 									.addGap(140)
+	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 										.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 											.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 												.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 													.addGap(38)
-	   	 													.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 														.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 															.addComponent(textField, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 															.addGap(10)
-	   	 															.addComponent(y10, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
-	   	 														.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 														.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 															.addGap(9)
-	   	 															.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))))
-	   	 												.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 													.addComponent(altto)
-	   	 													.addGap(30)
-	   	 													.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)))
-	   	 											.addGap(122))
-	   	 										.addComponent(lonto, GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE))
-	   	 									.addGap(244)
+	   	 											.addGap(166)
+	   	 											.addComponent(y10, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
+	   	 										.addComponent(altto))
+	   	 									.addGap(366)
 	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
 	   	 										.addGroup(gl_MyPanel2.createSequentialGroup()
 	   	 											.addComponent(y27, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
@@ -308,9 +274,7 @@ public class Source extends JFrame {
 	   	 			.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
 	   	 				.addGroup(gl_MyPanel2.createSequentialGroup()
 	   	 					.addComponent(x8, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
-	   	 					.addGap(175)
-	   	 					.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-	   	 					.addGap(25))
+	   	 					.addGap(237))
 	   	 				.addGroup(gl_MyPanel2.createSequentialGroup()
 	   	 					.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
@@ -336,9 +300,8 @@ public class Source extends JFrame {
 	   	 									.addGap(9)
 	   	 									.addComponent(y27)
 	   	 									.addGap(30)
-	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 										.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-	   	 										.addComponent(y34, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)))
+	   	 									.addComponent(y34, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
+	   	 									.addGap(5))
 	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
 	   	 									.addGap(7)
 	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.BASELINE)
@@ -368,21 +331,14 @@ public class Source extends JFrame {
 	   	 									.addGap(21))))
 	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
 	   	 							.addGap(42)
-	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.BASELINE)
-	   	 								.addComponent(y10, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
-	   	 								.addComponent(textField, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE))))
+	   	 							.addComponent(y10, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)))
 	   	 					.addPreferredGap(ComponentPlacement.RELATED)
-	   	 					.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-	   	 						.addComponent(TF, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-	   	 						.addComponent(TF1, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
-	   	 						.addComponent(lonto, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
+	   	 					.addComponent(TF1, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 	   	 					.addPreferredGap(ComponentPlacement.RELATED)
 	   	 					.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 						.addComponent(TF3, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 	   	 						.addComponent(altfrom, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
-	   	 						.addComponent(altto, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
-	   	 						.addComponent(TF2, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
+	   	 						.addComponent(altto, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
 	   	 					.addGap(0))))
 	   	 );
 	   	 MyPanel2.setLayout(gl_MyPanel2);
@@ -433,7 +389,7 @@ public class Source extends JFrame {
 	    	 );
 	    	 MyPanel3.setLayout(gl_MyPanel3);
 	     
-	    	 f.setSize(641, 585);
+	    	 f.setSize(872, 595);
 	    	 f.setVisible(true);
 	    	 
 	    	
