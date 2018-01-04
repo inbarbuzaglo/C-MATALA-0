@@ -1,11 +1,12 @@
 
+package Filter;
 
-package ToKML;
 
-	 
+
 	import java.util.Date;
 	import java.util.Scanner;
 
+import KML.toKML;
 import Scanning.Position;
 
 import java.text.DateFormat;
@@ -14,15 +15,19 @@ import java.text.DateFormat;
 
 	import java.io.File;
 	import java.io.FileNotFoundException;
-
+/**
+ * 
+ * @author Inbar
+ *This class filters by location or date (by user request) and writes a filtered KML file.
+ */
 	public class Filter {
 
-		static String FILENAME = "C://test/check.csv";
+		static String FILENAME = "C:/CSV2KML/OUTPUT/out.csv";
 		static Scanner fileScanner;
 		static String lineFromFile;
 		static String[] spliter;
 
-		public static void choosefilter() throws FileNotFoundException {
+		public static void initScanners()throws FileNotFoundException{
 			// load csv file
 			File f = new File(FILENAME);
 
@@ -30,6 +35,11 @@ import java.text.DateFormat;
 			fileScanner.nextLine();
 			lineFromFile = fileScanner.nextLine();
 			spliter = lineFromFile.split(",");
+		}
+		
+		public static void choosefilter() throws FileNotFoundException {
+
+			
 
 			// read user filter
 			System.out.println("select the desierd filtering option:\n 1.filter by time\n 2.filter by position");
@@ -58,18 +68,22 @@ import java.text.DateFormat;
 
 			else {
 				inputScanner.close();
-				while (fileScanner.hasNext()) {
-					lineFromFile = fileScanner.nextLine();
-					spliter = lineFromFile.split(",");
-					for (int i = 7; i < spliter.length; i += 4) {
-						if (!spliter[i].isEmpty()) {
-							toKML.AddPlacemark(spliter[i], spliter[3], spliter[2], spliter[4]);
-						}
-					}
-				}
-				fileScanner.close();
+				NonFilter();
 			}
 
+		}
+		
+		public static void NonFilter(){
+			while (fileScanner.hasNext()) {
+				lineFromFile = fileScanner.nextLine();
+				spliter = lineFromFile.split(",");
+				for (int i = 7; i < spliter.length; i += 4) {
+					if (!spliter[i].isEmpty()) {
+						toKML.AddPlacemark(spliter[i], spliter[3], spliter[2], spliter[4]);
+					}
+				}
+			}
+			fileScanner.close();
 		}
 
 		public static long StringDateToLong(String s) {
@@ -102,7 +116,7 @@ import java.text.DateFormat;
 			fileScanner.close();
 
 		}
-
+		//posFilter-filtering by Position(the user has to enter lan,lon,alt to filter)
 		public static void posFilter(Position pos) throws FileNotFoundException {
 			while (fileScanner.hasNext()) {
 				lineFromFile = fileScanner.nextLine();
