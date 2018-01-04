@@ -6,7 +6,7 @@ package git;
 	import java.util.Date;
 	import java.util.Scanner;
 
-import KML.toKML;
+import ToKML.toKML;
 import Scanning.Position;
 
 import java.text.DateFormat;
