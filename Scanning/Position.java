@@ -10,13 +10,13 @@ public class Position {
 
 
 	public Position() {
-		lon = 0.0;
 		lat = 0.0;
+		lon = 0.0;
 		alt = 0.0;
 	}
 	
 
-	public Position (String lon, String lat, String alt)
+	public Position (String lat, String lon, String alt)
    {
 		this.lat = Double.parseDouble(lat);
 		this.lon = Double.parseDouble(lon);
