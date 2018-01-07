@@ -32,7 +32,7 @@ public class wrapper {
 		
 	}
 	
-	public void tokml(File csv)
+	public void tokmlnone(File csv)
 	{
 	toKML.openKML();
 	try {
@@ -43,6 +43,20 @@ public class wrapper {
 		System.out.println("cannot find csv input file, " + e.getMessage());
 	}
 	
+	}
+	
+	public void tokmllat (File csv,String from,String to)
+	{
+		toKML.openKML();
+		try {
+			PosFilter.initScanners();
+			Position posfrom=new Position(from,"2.03","20");
+			Position posto=new Position(to,"2.03","20");
+			PosFilter.latFilter(posfrom.getLat(),posto.getLat());
+			toKML.closelatKML();
+		} catch (FileNotFoundException e) {
+			System.out.println("cannot find csv input file, " + e.getMessage());
+		}
 	}
 
 	
