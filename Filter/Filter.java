@@ -1,12 +1,12 @@
 
-package git;
+package Filter;
 
 
 
 	import java.util.Date;
 	import java.util.Scanner;
 
-import ToKML.toKML;
+import KML.toKML;
 import Scanning.Position;
 
 import java.text.DateFormat;
@@ -63,7 +63,7 @@ import java.text.DateFormat;
 				int alt = inputScanner.nextInt();
 				inputScanner.nextLine();
 				Position pos = new Position(lat, lon, alt);
-				Filter.posFilter(pos);
+				PosFilter.posFilter(pos);
 			}
 
 			else {
@@ -117,17 +117,7 @@ import java.text.DateFormat;
 
 		}
 		//posFilter-filtering by Position(the user has to enter lan,lon,alt to filter)
-		public static void posFilter(Position pos) throws FileNotFoundException {
-			while (fileScanner.hasNext()) {
-				lineFromFile = fileScanner.nextLine();
-				spliter = lineFromFile.split(",");
-				Position pos2 = new Position(spliter[2], spliter[3], spliter[4]);
-				if (pos.equals(pos2)) {
-					printWifiNetworks();
-				}
-			}
-			fileScanner.close();
-		}
+		
 		
 		public static void printWifiNetworks() {
 			for (int i = 7; i < spliter.length; i += 4) {
