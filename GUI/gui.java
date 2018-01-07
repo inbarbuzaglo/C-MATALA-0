@@ -405,15 +405,7 @@ public class Source extends JFrame {
 	    	      }
 	    	    });
 	    	 
-	    	 x8.addItemListener(new ItemListener() { //lat filter
-	    	      public void itemStateChanged(ItemEvent e) {
-	    	    	  if(x8.isSelected())
-	    	    	  {
-	    	    		  System.out.println("true");
-	    	    	  }
-	    	       
-	    	      }
-	    	    });
+	    	
 	    	 x9.addItemListener(new ItemListener() { //lon filter
 	    	      public void itemStateChanged(ItemEvent e) {
 	    	    	  if(x9.isSelected())
@@ -501,13 +493,23 @@ public class Source extends JFrame {
 	    	    		 String s=x2.getText();
 	    	    		 public void actionPerformed(ActionEvent evt) 
 	    	    		 {
-	    	    			 
+	    	    			 if(x8.isSelected())
+	    	    			 {
+	    	    				 String from=y32.getText();
+	    	    				 String to=textField_7.getText();
+	    	    				 File folder = new File(s);
+		    	    			 w.tokmllat(folder,from,to);
+	    	    			 }
+	    	    			 else
+	    	    			 {
 	    	    			 String s=x2.getText();
 	    	    			 File folder = new File(s);
-	    	    			  w.tokml(folder);
+	    	    			  w.tokmlnone(folder);
+	    	    			 }
 	    	    		
 	    	         	 }
 	    	    	 });
+	    	 
 	    	 
 	    	y7.addActionListener(new ActionListener()
 	    	 {
