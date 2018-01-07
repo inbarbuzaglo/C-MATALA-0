@@ -60,6 +60,39 @@ import de.micromata.opengis.kml.v_2_2_0.Document;
 				e.printStackTrace();
 			}
 		}
+		
+			public static void closelonKML() {
+			try {
+				kml.setFeature(document);
+				kml.marshal(new File("C:/CSV2KML/OUTPUT/lonfilter.kml"));
+				System.out.println("KML filtered by lon file has been generated, check output folder.");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public static void closealtKML() {
+			try {
+				kml.setFeature(document);
+				kml.marshal(new File("C:/CSV2KML/OUTPUT/altfilter.kml"));
+				System.out.println("KML filtered by alt file has been generated, check output folder.");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public static void closetimeKML() {
+			try {
+				kml.setFeature(document);
+				kml.marshal(new File("C:/CSV2KML/OUTPUT/TIMEfilter.kml"));
+				System.out.println("KML filtered by time file has been generated, check output folder.");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
 	}
 
