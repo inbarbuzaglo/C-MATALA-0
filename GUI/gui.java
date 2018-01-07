@@ -135,7 +135,7 @@ public class Source extends JFrame {
 	   	 JLabel y10 = new JLabel("    ");
 	   	 final JCheckBox x7 = new JCheckBox("time");
 	   	 JLabel y25 = new JLabel("from");
-	   	 JTextField y26 = new JTextField(10);
+	   	 final JTextField y26 = new JTextField(10);
 		 JLabel y27 = new JLabel("to");
 	   	 final JCheckBox x8 = new JCheckBox("lat");
 	  
@@ -173,14 +173,6 @@ public class Source extends JFrame {
 	   	 textField_8 = new JTextField(10);
 	   	 
 	   	 textField_9 = new JTextField(10);
-	   	 
-	   	 JButton btnGo = new JButton("go");
-	   	 
-	   	 JButton button = new JButton("go");
-	   	 
-	   	 JButton button_1 = new JButton("go");
-	   	 
-	   	 JButton button_2 = new JButton("go");
 	   	 GroupLayout gl_MyPanel2 = new GroupLayout(MyPanel2);
 	   	 gl_MyPanel2.setHorizontalGroup(
 	   	 	gl_MyPanel2.createParallelGroup(Alignment.LEADING)
@@ -233,37 +225,29 @@ public class Source extends JFrame {
 	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 								.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
 	   	 								.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))))
-	   	 					.addPreferredGap(ComponentPlacement.UNRELATED)
-	   	 					.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
+	   	 					.addGap(136)
+	   	 					.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
 	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
+	   	 							.addComponent(SP2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 							.addComponent(SP3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 							.addComponent(SP4, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
+	   	 						.addComponent(TF3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
+	   	 							.addComponent(altfrom, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+	   	 							.addGap(140)
 	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 								.addComponent(btnGo)
-	   	 								.addComponent(button, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
-	   	 								.addComponent(button_1, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE))
-	   	 							.addGap(81)
+	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
+	   	 									.addGap(166)
+	   	 									.addComponent(y10, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
+	   	 								.addComponent(altto))
+	   	 							.addGap(366)
 	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
 	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 									.addComponent(SP2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 									.addComponent(SP3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 									.addComponent(SP4, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
-	   	 								.addComponent(TF3, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 									.addComponent(altfrom, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-	   	 									.addGap(140)
-	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 										.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 											.addGap(166)
-	   	 											.addComponent(y10, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
-	   	 										.addComponent(altto))
-	   	 									.addGap(366)
-	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.TRAILING)
-	   	 										.addGroup(gl_MyPanel2.createSequentialGroup()
-	   	 											.addComponent(y27, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-	   	 											.addGap(162))
-	   	 										.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
-	   	 											.addComponent(y34, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-	   	 											.addComponent(TF1, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))))))
-	   	 						.addComponent(button_2, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE))))
+	   	 									.addComponent(y27, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+	   	 									.addGap(162))
+	   	 								.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
+	   	 									.addComponent(y34, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	   	 									.addComponent(TF1, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)))))))
 	   	 			.addContainerGap())
 	   	 );
 	   	 gl_MyPanel2.setVerticalGroup(
@@ -293,8 +277,7 @@ public class Source extends JFrame {
 	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.BASELINE)
 	   	 										.addComponent(y26, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	   	 										.addComponent(label)
-	   	 										.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	   	 										.addComponent(btnGo))))
+	   	 										.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
 	   	 							.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 								.addGroup(gl_MyPanel2.createSequentialGroup()
 	   	 									.addGap(9)
@@ -308,8 +291,7 @@ public class Source extends JFrame {
 	   	 										.addComponent(y31, GroupLayout.PREFERRED_SIZE, 52, GroupLayout.PREFERRED_SIZE)
 	   	 										.addComponent(y32, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	   	 										.addComponent(y33, GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
-	   	 										.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	   	 										.addComponent(button))
+	   	 										.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 	   	 									.addGap(6)
 	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING)
 	   	 										.addComponent(x9, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
@@ -317,16 +299,14 @@ public class Source extends JFrame {
 	   	 											.addComponent(lonfrom, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 	   	 											.addComponent(label_1)
 	   	 											.addComponent(textField_8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	   	 											.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	   	 											.addComponent(button_1)))
+	   	 											.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
 	   	 									.addPreferredGap(ComponentPlacement.RELATED)
 	   	 									.addGroup(gl_MyPanel2.createParallelGroup(Alignment.LEADING, false)
 	   	 										.addGroup(gl_MyPanel2.createParallelGroup(Alignment.BASELINE)
 	   	 											.addComponent(label_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 	   	 											.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	   	 											.addComponent(label_3)
-	   	 											.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	   	 											.addComponent(button_2))
+	   	 											.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 	   	 										.addComponent(x10, GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
 	   	 									.addGap(21))))
 	   	 						.addGroup(gl_MyPanel2.createSequentialGroup()
@@ -405,7 +385,15 @@ public class Source extends JFrame {
 	    	      }
 	    	    });
 	    	 
-	    	
+	    	 x8.addItemListener(new ItemListener() { //lat filter
+	    	      public void itemStateChanged(ItemEvent e) {
+	    	    	  if(x8.isSelected())
+	    	    	  {
+	    	    		  System.out.println("true");
+	    	    	  }
+	    	       
+	    	      }
+	    	    });
 	    	 x9.addItemListener(new ItemListener() { //lon filter
 	    	      public void itemStateChanged(ItemEvent e) {
 	    	    	  if(x9.isSelected())
@@ -425,40 +413,6 @@ public class Source extends JFrame {
 	    	       
 	    	      }
 	    	    });
-	    	 
-	    	 btnGo.addActionListener(new ActionListener()
-	    	 {
-	    		 public void actionPerformed(ActionEvent evt)
-	    		 {
-	    			 System.out.println("go time filter");
-	         	 }
-	    	 });
-	    	 
-	    	 button.addActionListener(new ActionListener()
-	    	 {
-	    		 public void actionPerformed(ActionEvent evt)
-	    		 {
-	    			 String latfrom=y32.getText();
-	    			 String latto=y34.getText();	    			
-	    		
-	         	 }
-	    	 });
-	    	 
-	    	 button_1.addActionListener(new ActionListener()
-	    	 {
-	    		 public void actionPerformed(ActionEvent evt)
-	    		 {
-	    			 System.out.println("go lon filter");
-	         	 }
-	    	 });
-	    	 
-	    	 button_2.addActionListener(new ActionListener()
-	    	 {
-	    		 public void actionPerformed(ActionEvent evt)
-	    		 {
-	    			 System.out.println("go alt filter");
-	         	 }
-	    	 });
 	    	 
 	    	 y17.addActionListener(new ActionListener() //ALGO1 BUTTON
 	    	 {
@@ -500,6 +454,29 @@ public class Source extends JFrame {
 	    	    				 File folder = new File(s);
 		    	    			 w.tokmllat(folder,from,to);
 	    	    			 }
+	    	    			 else if(x9.isSelected())
+	    	    			 {
+	    	    				 String lonfrom=textField_4.getText();
+	    	    				 String lonto=textField_8.getText();
+	    	    				 File folder = new File(s);
+		    	    			 w.tokmllon(folder,lonfrom,lonto);
+	    	    			 }
+	    	    			 
+	    	    			 else if(x10.isSelected())
+	    	    			 {
+	    	    				 String altfrom=textField_5.getText();
+	    	    				 String altto=textField_9.getText();
+	    	    				 File folder = new File(s);
+		    	    			 w.tokmlalt(folder,altfrom,altto);
+	    	    			 }
+	    	    			 
+	    	    			 else if(x7.isSelected())  //time filter
+	    	    			 {
+	    	    				 String timefrom=y26.getText();
+	    	    				 String timeto=textField_6.getText();
+	    	    				 File folder = new File(s);
+		    	    			 w.tokmltime(folder,timefrom,timeto);
+	    	    			 }
 	    	    			 else
 	    	    			 {
 	    	    			 String s=x2.getText();
@@ -509,7 +486,6 @@ public class Source extends JFrame {
 	    	    		
 	    	         	 }
 	    	    	 });
-	    	 
 	    	 
 	    	y7.addActionListener(new ActionListener()
 	    	 {
