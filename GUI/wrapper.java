@@ -8,7 +8,9 @@ import Algo.Algo;
 import Algo.Algo2;
 import CSV.ListFromCSV;
 import Filter.Filter;
-import ToKML.toKML;
+import KML.toKML;
+import Scanning.Position;
+import Filter.PosFilter;
 
 public class wrapper {
 	
@@ -101,7 +103,6 @@ public class wrapper {
 		}
 	}
 
-
 	
 	public void Algo1()
 	{
@@ -118,6 +119,10 @@ public class wrapper {
 		ListFromCSV.mergedfiles.clear();
 	}
 	
+	public void latfilter(double lat1,double lat2)
+	{
+		PosFilter.latFilter(lat1, lat2);
+	}
 	
 
 }
