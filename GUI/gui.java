@@ -375,44 +375,7 @@ public class Source extends JFrame {
 	    	
 	    	 
 	    	
-	    	 x7.addItemListener(new ItemListener() { //time filter
-	    	      public void itemStateChanged(ItemEvent e) {
-	    	    	  if(x7.isSelected())
-	    	    	  {
-	    	    		  System.out.println("true");
-	    	    	  }
-	    	       
-	    	      }
-	    	    });
-	    	 
-	    	 x8.addItemListener(new ItemListener() { //lat filter
-	    	      public void itemStateChanged(ItemEvent e) {
-	    	    	  if(x8.isSelected())
-	    	    	  {
-	    	    		  System.out.println("true");
-	    	    	  }
-	    	       
-	    	      }
-	    	    });
-	    	 x9.addItemListener(new ItemListener() { //lon filter
-	    	      public void itemStateChanged(ItemEvent e) {
-	    	    	  if(x9.isSelected())
-	    	    	  {
-	    	    		  System.out.println("true");
-	    	    	  }
-	    	       
-	    	      }
-	    	    });
-	    	 
-	    	 x10.addItemListener(new ItemListener() { //alt filter
-	    	      public void itemStateChanged(ItemEvent e) {
-	    	    	  if(x10.isSelected())
-	    	    	  {
-	    	    		  System.out.println("true");
-	    	    	  }
-	    	       
-	    	      }
-	    	    });
+	    	
 	    	 
 	    	 y17.addActionListener(new ActionListener() //ALGO1 BUTTON
 	    	 {
