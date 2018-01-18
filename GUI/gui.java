@@ -1,4 +1,4 @@
-package GUI;
+ package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -23,6 +23,7 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Font;
+import javax.swing.JTextArea;
 
 public class Source extends JFrame {
 
@@ -76,6 +77,12 @@ public class Source extends JFrame {
 	    
 	   	 f.getContentPane().add( MyPanel1, "North");   // Add MyPanel1 to North
 	   	 JButton y7 = new JButton("Clear data");
+	   	 
+	   	 JButton btn = new JButton("get data DB");
+	   	 btn.addActionListener(new ActionListener() {
+	   	 	public void actionPerformed(ActionEvent arg0) {
+	   	 	}
+	   	 });
 	   	 GroupLayout gl_MyPanel1 = new GroupLayout(MyPanel1);
 	   	 gl_MyPanel1.setHorizontalGroup(
 	   	 	gl_MyPanel1.createParallelGroup(Alignment.LEADING)
@@ -85,32 +92,34 @@ public class Source extends JFrame {
 	   	 			.addGap(18)
 	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.LEADING)
 	   	 				.addGroup(gl_MyPanel1.createSequentialGroup()
-	   	 					.addComponent(x2, GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+	   	 					.addComponent(x2, GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
 	   	 					.addGap(63))
 	   	 				.addGroup(gl_MyPanel1.createSequentialGroup()
 	   	 					.addComponent(x5)
 	   	 					.addGap(97)))
 	   	 			.addComponent(x3)
 	   	 			.addPreferredGap(ComponentPlacement.RELATED)
-	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.TRAILING)
-	   	 				.addGroup(Alignment.LEADING, gl_MyPanel1.createSequentialGroup()
+	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.LEADING)
+	   	 				.addGroup(gl_MyPanel1.createSequentialGroup()
 	   	 					.addComponent(y6)
 	   	 					.addGap(52)
-	   	 					.addComponent(y7)
-	   	 					.addContainerGap())
+	   	 					.addComponent(y7))
 	   	 				.addGroup(gl_MyPanel1.createSequentialGroup()
 	   	 					.addComponent(x4, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE)
-	   	 					.addGap(182))))
+	   	 					.addPreferredGap(ComponentPlacement.UNRELATED)
+	   	 					.addComponent(btn, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)))
+	   	 			.addGap(93))
 	   	 );
 	   	 gl_MyPanel1.setVerticalGroup(
 	   	 	gl_MyPanel1.createParallelGroup(Alignment.LEADING)
 	   	 		.addGroup(gl_MyPanel1.createSequentialGroup()
-	   	 			.addContainerGap()
+	   	 			.addGap(35)
 	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.BASELINE)
 	   	 				.addComponent(x2, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
 	   	 				.addComponent(x1)
 	   	 				.addComponent(x3)
-	   	 				.addComponent(x4, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
+	   	 				.addComponent(x4, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+	   	 				.addComponent(btn, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
 	   	 			.addPreferredGap(ComponentPlacement.RELATED)
 	   	 			.addGroup(gl_MyPanel1.createParallelGroup(Alignment.BASELINE)
 	   	 				.addComponent(x5)
@@ -463,7 +472,21 @@ public class Source extends JFrame {
 	 				}
 	         	 }
 	    	 });
-	    	 
+	    	
+	     	btn.addActionListener(new ActionListener()
+	    	 {
+	    		 public void actionPerformed(ActionEvent evt)
+	    		 {
+	    			
+	    			 try {
+	    				 
+	    				 w.getdata();
+	    				 	    				
+	 				} catch (Exception e) {
+	 					 System.out.println("failed");
+	 				}
+	         	 }
+	    	 });
 
 	    	 
 	    	 
