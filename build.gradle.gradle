@@ -9,6 +9,18 @@ description = """matala"""
 sourceCompatibility = 1.5
 targetCompatibility = 1.5
 
+create a single Jar with all dependencies
+task fatJar(type: Jar) {
+	manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+        	'Implementation-Version': version,
+        	'Main-Class': 'matala0.src.GUI.Source'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
 
 
 repositories {
